@@ -1,0 +1,20 @@
+{
+  "name": "francescohen",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/fcohen26/francescohen.git",
+  "author": "Frances Cohen <t-frcohe@microsoft.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "clean": "rimraf dist",
+    "build": "yarn clean & SET WEBPACK_ENV=production& webpack --colors",
+    "deploy": "yarn build & surge -p dist -d francescohen.surge.sh & yarn clean"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
