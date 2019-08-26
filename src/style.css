@@ -1,0 +1,241 @@
+body {
+    font-size: 30rem;
+
+}
+/* .sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} */
+a {
+    text-decoration: none;
+  }
+  .section-title {
+    text-align: center;
+    font-family: 'Lora', serif; font-size: 50px;
+    margin-bottom: 80px;
+    text-decoration: none;
+  }
+
+.section-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+}
+.section-tabs-container {
+  /* font-size: 100px; */
+
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+}
+.section-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+.section-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 20px;
+}
+.section-tab:hover {
+  color:white;
+  background: rgba(102,177,241,0.8);
+  transition: all 0.5s ease;
+}
+
+.section-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  /* transition: left 0.3s ease; */
+}
+html { font-size: 1px; }
+.header {
+/* font-size: 1px; */
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url(https://images.unsplash.com/photo-1493382051629-7eb03ec93ea2);
+  /* background-position: 50% 75%;
+  background-size: cover; */
+}
+
+.inner-header {
+    /* font-size: 1px; */
+  position: relative;
+  display: flex;
+}
+
+h1 { margin: 0; }
+.marker, .e, .l, .c, .o, .m {
+  animation-timing-function: cubic-bezier(0.15,-0.01, 0.58, 1);
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.marker {
+  position: absolute; top: 4rem; left: -3rem;
+  height: 3rem; width: 40rem;
+  background-color: black;
+  animation-name: marker;
+}
+
+.e { margin-left: 1rem;   animation-name: e; }
+.l { margin-left: 7rem; animation-name: l; }
+.c { margin-left: 16rem; animation-name: c; }
+.o { margin-left: 21rem; animation-name: o; }
+.m { margin: 0 36rem 0 42rem; animation-name: m; }
+
+@keyframes e { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(35rem); }
+}
+@keyframes l { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(75rem); }
+}
+@keyframes c { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(81rem); }
+}
+@keyframes o { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(71rem); }
+}
+@keyframes m { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(34rem); }
+}
+@keyframes marker { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(337rem); }
+}
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.about-image {
+    height: 500px;
+    width: 400px;
+    margin: 100px;
+}
+.about-text {
+    width: 500px;
+    height: 500px;
+    margin: 100px;
+    align-self: flex-end;
+}
+
+.box {
+    width: 400px;
+    background: #123;
+    margin: 48px auto;
+    padding: 16px;
+    position: relative;
+  }
+  
+  .box > img {
+    width: 400px;
+    height: 300px;
+    opacity: .5;
+    object-fit: cover;
+  }
+
+  .box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    left: 40px;
+    bottom: 40px + 7px;
+    border: solid 4px white;
+    border-bottom: 0;
+  }
+  
+  .text {
+    color: white; 
+    position: absolute;
+    text-align: center;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    font-family: 'fjalla one', sans-serif;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1em;
+  }
+  .subtitle {
+      font-size: 15px;
+  }
+  .experience-list, .projects-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  #contact-icons {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-icon {
+    margin: 10px;
+  }
+  #resume-icon {
+    font-size: 35px;
+    border-radius: 25px;
+    border: 2px solid;
+    padding: 5px; 
+  
+  }
+  
+  /* .text > div {
+    width: 2000px;
+    margin-left: -1 * (2000px - (400px - 40px)) / 2;
+  }
+  
+  
+  .innertext::before,
+  .innertext::after {
+    content: '';
+    display: inline-block;
+    width: 600px;
+    height: 4px;
+    background: white;
+    vertical-align: middle;
+  }
+    
+  .innertext::before {
+    margin-right: 16px;
+  }
+  
+  .innertext::after {
+    margin-left: 16px;
+  }  */
