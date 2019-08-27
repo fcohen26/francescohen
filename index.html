@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
+        <link href="src/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:100" rel="stylesheet">
@@ -48,7 +48,7 @@
     <div class="section">
         <h2 class="section-title"><a id="about">About</a></h2>
             <div class="about-content">
-                <img class = "about-image" src="img/me.jpg">
+                <img class = "about-image" src="src/img/me.jpg">
                 <p class= "about-text">Hi!! My name is Frances, and I'm an aspiring software engineer born and raised in New York City. I'm a senior at Dartmouth College, and I can't wait for all the adventures in the years to come... </p>
             </div>
     </div><!-- /.row -->
@@ -59,8 +59,8 @@
       <hr class="section-divider">
       <h2 class="section-title"><a id="experience">Experience</a></h2>
       <div class="experience-list">
-          <div class='box'>
-              <img src='img/seattle.jpg'>
+          <div class='box' id="microsoft-box">
+              <img src='src/img/seattle.jpg'>
               <div class='text'>
                 <div>
                   <p class='innertext'>Microsoft</p>
@@ -68,8 +68,14 @@
                 </div>
               </div>
             </div>
-            <div class='box'>
-                <img src='img/newyork.jpg'>
+            <div id="microsoft-modal" class="modal">
+              <div class="modal-content">
+                <span class="close"></span>
+                <p>Microsoft modal content</p>
+              </div>
+            </div>
+            <div class='box' id="pivotal-box">
+                <img src='src/img/newyork.jpg'>
                 <div class='text'>
                   <div>
                     <p class='innertext'>Pivotal</p>
@@ -77,8 +83,14 @@
                   </div>
                 </div>
               </div>
-              <div class='box'>
-                  <img src='img/dartmouth.jpg'>
+              <div id="pivotal-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close"></span>
+                  <p>Pivotal modal content</p>
+                </div>
+              </div>
+              <div class='box' id="ta-box">
+                  <img src='src/img/dartmouth.jpg'>
                   <div class='text'>
                     <div>
                       <p class='innertext'>Teaching Assistant</p>
@@ -86,14 +98,25 @@
                     </div>
                   </div>
                 </div>
-                <div class='box'>
-                    <img src='img/budapest.jpg'>
-                    
+                <div id="ta-modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close"></span>
+                    <p>TA modal content</p>
+                  </div>
+                </div>
+                <div class='box' id="ait-box">
+                    <img src='src/img/budapest.jpg'>
                     <div class='text'>
                       <div>
                         <p class='innertext'>Acquincum Institute of Technology</p>
                         <span class="subtitle">Budapest, Hungary</span>
                       </div>
+                    </div>
+                  </div>
+                  <div id="ait-modal" class="modal">
+                    <div class="modal-content">
+                      <span class="close"></span>
+                      <p>AIT modal content</p>
                     </div>
                   </div>
       </div>
@@ -104,9 +127,8 @@
         <hr class="section-divider">
         <h2 class="section-title"><a id="projects">Projects</a></h2>
         <div class="projects-list">
-            <div class='box'>
-                <img src='img/project1.jpg'>
-                
+            <div class='box' id="project1-box">
+                <img src='src/img/project1.jpg'>
                 <div class='text'>
                   <div>
                     <p class='innertext'>FCB Web API</p>
@@ -114,9 +136,14 @@
                   </div>
                 </div>
               </div>
-              <div class='box'>
-                  <img src='img/project2.jpg'>
-                  
+              <div id="project1-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close"></span>
+                  <p>Project1 modal content</p>
+                </div>
+              </div>
+              <div class='box' id="project2-box">
+                  <img src='src/img/project2.jpg'>
                   <div class='text'>
                     <div>
                       <p class='innertext'>Desktop Notifications</p>
@@ -124,8 +151,14 @@
                     </div>
                   </div>
                 </div>
-                <div class='box'>
-                    <img src='img/project4.jpg'>
+                <div id="project2-modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close"></span>
+                    <p>Project2 modal content</p>
+                  </div>
+                </div>
+                <div class='box' id="project3-box">
+                    <img src='src/img/project4.jpg'>
                     <div class='text'>
                       <div>
                         <p class='innertext'>ASL Hack for Cortana</p>
@@ -133,14 +166,25 @@
                       </div>
                     </div>
                   </div>
-                  <div class='box'>
-                      <img src='img/project3.jpg'>
-                      
+                  <div id="project3-modal" class="modal">
+                    <div class="modal-content">
+                      <span class="close"></span>
+                      <p>Project3 modal content</p>
+                    </div>
+                  </div>
+                  <div class='box' id="project4-box">
+                      <img src='src/img/project3.jpg'>
                       <div class='text'>
                         <div>
                           <p class='innertext'>Tiny Search Engine</p>
                           <span class="subtitle">CS50, Dartmouth College</span>
                         </div>
+                      </div>
+                    </div>
+                    <div id="project4-modal" class="modal">
+                      <div class="modal-content">
+                        <span class="close"></span>
+                        <p>Project4 modal content</p>
                       </div>
                     </div>
         </div>
@@ -154,12 +198,12 @@
         <div id="contact-icons">
             <a class="contact-icon" href="https://github.com/fcohen26"> <i class="fab fa-github fa-4x"></i></a>
             <a class="contact-icon" href="https://www.linkedin.com/in/frances-cohen-912bb9164"> <i class="fab fa-linkedin fa-4x"></i></a>
-            <a id="resume-icon" class="contact-icon" href="assets/FrancesCohenResume.pdf">Resume</a>
+            <a id="resume-icon" class="contact-icon" href="src/assets/FrancesCohenResume.pdf">Resume</a>
           </div>
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
