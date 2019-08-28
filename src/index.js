@@ -166,6 +166,7 @@ project4Box.onclick = function() {
 project4Close.onclick = function() {
   project4Modal.style.display = "none";
 }
+
 window.onclick = function(event) {
   if (event.target == aitModal || event.target == taModal || event.target == pivotalModal || event.target == microsoftModal || 
     event.target == project1Modal || event.target == project2Modal || event.target == project3Modal || event.target == project4Modal) {

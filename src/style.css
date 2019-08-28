@@ -1,6 +1,7 @@
 body {
     font-size: 30rem;
-
+    /* background-color: #f8fbf7; */
+    background-color: #f7f7f2;
 }
 /* .sections {
     display: flex;
@@ -13,9 +14,22 @@ a {
   }
   .section-title {
     text-align: center;
-    font-family: 'Lora', serif; font-size: 50px;
+    font-family: 'Lora', serif; font-size: 60px;
     margin-bottom: 80px;
     text-decoration: none;
+    font-family: 'Averia Serif Libre', cursive;
+  }
+  .section-divider {
+    margin: 80px;
+  }
+  .box-divider {
+    /* margin: 40px; */
+    width: 40px;
+    height: 3px;
+    color: white;
+    background-color: white;
+    border-radius: 100px;
+    /* border: solid white; */
   }
 
 .section-tabs {
@@ -31,7 +45,6 @@ a {
 }
 .section-tabs-container {
   /* font-size: 100px; */
-
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -142,7 +155,7 @@ h1 { margin: 0; }
 .about-content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
 }
 .about-image {
     height: 500px;
@@ -150,10 +163,11 @@ h1 { margin: 0; }
     margin: 100px;
 }
 .about-text {
-    width: 500px;
+  margin-bottom: 100px;
+    /* width: 500px;
     height: 500px;
-    margin: 100px;
-    align-self: flex-end;
+    margin: 100px; */
+    /* align-self: flex-end; */
 }
 
 .box {
@@ -199,6 +213,7 @@ h1 { margin: 0; }
   .subtitle {
       font-size: 15px;
   }
+  
   .modal {
     display: none;
     position: fixed;
@@ -217,6 +232,13 @@ h1 { margin: 0; }
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    position: relative;
+    animation-name: modalanimation;
+    animation-duration: 0.4s;
+  }
+  @keyframes modalanimation {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
   }
   .close {
     color: #aaa;
@@ -250,26 +272,18 @@ h1 { margin: 0; }
   
   }
   
-  /* .text > div {
-    width: 2000px;
-    margin-left: -1 * (2000px - (400px - 40px)) / 2;
-  }
-  
-  
-  .innertext::before,
-  .innertext::after {
-    content: '';
-    display: inline-block;
-    width: 600px;
-    height: 4px;
-    background: white;
-    vertical-align: middle;
-  }
-    
-  .innertext::before {
-    margin-right: 16px;
-  }
-  
-  .innertext::after {
-    margin-left: 16px;
-  }  */
+/* Mobile responsive design */
+@media only screen and (max-width: 768px) {
+  .about-image {
+    height: 300px;
+    width: 200px;
+    margin: 0px;
+}
+.about-text {
+  font-size: 10px;
+  margin: 20px;
+}
+.modal-content {
+  font-size: 20px;
+}
+}
