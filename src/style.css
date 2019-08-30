@@ -184,6 +184,25 @@ h1 { margin: 0; }
     opacity: .5;
     object-fit: cover;
   }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  svg line {
+    stroke-width: 10;
+    stroke: #000;
+    fill: none;
+    stroke-dasharray: 200;
+    -webkit-transition: -webkit-transform .6s ease-out;
+    transition: transform .6s ease-out;
+  }
+  
+  .box:hover svg line {
+    -webkit-transform: translateX(-400px);
+    transform: translateX(-400px);
+  }
 
   .box::after {
     content: '';
@@ -260,16 +279,17 @@ h1 { margin: 0; }
   #contact-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .contact-icon {
-    margin: 10px;
+    margin: 20px;
   }
   #resume-icon {
     font-size: 35px;
     border-radius: 25px;
     border: 2px solid;
-    padding: 5px; 
-  
+    padding: 5px;
+    text-align: center;
   }
   
 /* Mobile responsive design */
@@ -285,5 +305,17 @@ h1 { margin: 0; }
 }
 .modal-content {
   font-size: 20px;
+}
+.section-tab {
+  font-size: 15px;
+}
+.box {
+  width: 350px;
+}
+.box > img {
+  width: 350px;
+}
+.section-tabs-container {
+  bottom: 70px;
 }
 }
