@@ -15,7 +15,7 @@ a {
   .section-title {
     text-align: center;
     font-family: 'Lora', serif; font-size: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     text-decoration: none;
     font-family: 'Averia Serif Libre', cursive;
   }
@@ -310,12 +310,23 @@ h1 { margin: 0; }
   font-size: 15px;
 }
 .box {
-  width: 350px;
+  width: 300px;
 }
 .box > img {
-  width: 350px;
+  width: 300px;
 }
 .section-tabs-container {
   bottom: 70px;
+}
+.contact-icon {
+  margin: 10px;
+  /* size: 5px 5px; */
+}
+#contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  /* height: 10px; */
 }
 }
