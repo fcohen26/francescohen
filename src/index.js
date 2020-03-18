@@ -73,7 +73,7 @@ class StickyNavigation {
 
 var microsoftModal = document.getElementById("microsoft-modal");
 var microsoftBox = document.getElementById("microsoft-box");
-var microsoftClose = document.getElementsByClassName("close")[0];
+var microsoftClose = document.getElementById("microsoft-close");
 
 microsoftBox.onclick = function() {
   microsoftModal.style.display = "block";
